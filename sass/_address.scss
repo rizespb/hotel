@@ -1,0 +1,54 @@
+.address {
+    grid-column: center-start / center-end;
+    font-style: normal;
+    //max-height: 80vh;
+    //overflow: hidden;
+    background-color: $color-primary;
+
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    &__contacts {
+        grid-column: 1 / 3;
+
+        padding: 5rem 0 0rem 13rem;
+
+        & > .heading-2 {
+            text-align: start;
+        }
+    }
+
+    &__block {
+        margin-bottom: 2rem;
+        font-size: 1.6rem;
+
+        &--heading {
+            font-weight: 700;
+        }
+    }
+
+    &__block-icons {
+        display: flex;
+        margin-top: 1rem;
+    }
+
+    &__block-icon {
+        width: 2.5rem;
+        height: 2.5rem;
+        fill: $color-grey;
+        background-color: $color-white;
+        border-radius: 50%;
+
+        &:not(:last-child) {
+        margin-right: 2rem;
+        }
+    }
+
+    &__map {
+        grid-column: 3 / -1;
+        width: 100%;
+        height: 100%;
+
+    }
+}

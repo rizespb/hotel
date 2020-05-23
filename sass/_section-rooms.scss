@@ -1,0 +1,112 @@
+.section-rooms {
+    background-image: url(/img/fish-large.png);
+    background-position: 0% 0%;
+    background-size: 50rem;
+    background-repeat: no-repeat;
+
+    grid-column: center-start / center-end;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr;   
+
+    position: relative;
+
+        &__picture {
+            grid-column: 1 / 2;
+            padding-left: 20rem;
+            width: 100%;
+            height: auto;
+        }
+
+        &__content {
+            background-color: $color-white;
+            padding: 4rem 10rem;
+            border-radius: 1rem;
+            box-shadow: $shadow-light;
+            align-self: center;
+            z-index: 10;
+
+            right: 0;
+            width: 120%;
+            margin-left: -20%;
+        }
+
+        & > .heading-2 {
+            grid-column: 1 / -1;
+
+        }
+
+        &__properties {
+            font-size: 1.6rem;
+            margin-bottom: 3rem;
+            list-style: none;
+
+            & > .property {
+                display: flex;
+                align-items: center;
+                
+                &::before {
+                    content: "";
+                    display: inline-block;
+                    width: .8rem;
+                    height: .8rem;
+                    border-radius: 50%;
+                    background-color: $color-primary;
+                    margin-right: .7rem;
+                }
+            }
+        }
+
+        &__toogle-box {
+            grid-column: 1 / -1;
+            margin-top: 5rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        &__toogle {
+            width: 1rem;
+            height: 1rem;
+            border-radius: 50%;
+
+            &--orange {
+                background-color: $color-secondary;
+            }
+
+            &--grey {
+                background-color: #e1e1e1;
+            }
+
+            &:not(:last-child) {
+                margin-right: 1.3rem;
+            }
+        }
+
+        &__chevron-box {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            
+            &--small {
+                width: 3.6rem;
+                height: 3.6rem;
+                border-radius: 50%;
+                box-shadow: 0 0 2rem rgba(0,0,0,.1);
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &:not(:last-child) {
+                    margin-right: 1rem;
+                }
+            }
+        }
+
+        &__chevron {
+            width: 50%;
+            height: auto;
+            fill: $color-secondary;
+        }
+}

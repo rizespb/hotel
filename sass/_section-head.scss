@@ -1,0 +1,35 @@
+.section-head {
+    grid-column: center-start / center-end;
+
+    background: url(../img/background-main.png) no-repeat, url(../img/cat_main.png) 100% 0%;
+    background-size: auto cover;
+
+    display: grid;
+    grid-template-columns: minmax(min-content, max-content);
+    grid-template-rows: 1fr repeat(4, min-content) 1fr;
+    justify-items: start;
+
+    padding-left: 17rem;
+
+
+    &__city {
+        grid-row: 2 / 3;
+        font-size: 1.4rem;
+    }
+    
+    & > .heading-1 {
+        grid-row: 3 / 4;
+        //margin-top: -1rem;
+    }
+
+    &__text {
+        grid-row: 4 / 5;
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 4rem;
+    }
+
+    & > .btn {
+        grid-row: 5 / 6;
+    }
+}

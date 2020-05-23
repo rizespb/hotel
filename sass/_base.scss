@@ -1,0 +1,47 @@
+/// COLOR VARIABLES
+$color-primary: #FAC663;
+$color-secondary: #FF7236;
+$color-grey: #1A212F;
+$color-grey-light: #E5E5E5;
+$color-white: #fff;
+$shadow-light: 0 0 2rem rgba(0,0,0,.1);
+
+/// FONT VARIABLES
+$font-primary: 'Lato', sans-serif;
+$font-display: 'Rubik', sans-serif;
+
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1rem = 10px / browser default font-size is 16px / 16px*62.5% = 10px / The font-size of <html> is = 1rem */
+}
+
+body {
+    font-family: $font-primary;
+    color: $color-grey;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.container {
+
+    display: grid;
+
+  //  grid-template-rows: 3rem repeat(6, 30rem);
+  //  grid-template-columns: repeat(10, 23rem);
+    //grid-template-columns: [full-start] 3rem [center-start] repeat(5, [col-start] minmax(min-content, 23rem) [col-end]) [center-end] 3rem [full-end];
+
+    grid-template-rows: 6rem minmax(min-content, 50rem) repeat(5, minmax(min-content, max-content));
+    grid-row-gap: 1rem;
+
+    grid-template-columns: [full-start] minmax(3rem, 1fr) [center-start] repeat(5, [col-start] minmax(min-content, 30rem) [col-end]) [center-end] minmax(3rem, 1fr) [full-end];
+
+}

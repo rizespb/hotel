@@ -1,0 +1,13 @@
+.copyright {
+    grid-column: center-start / center-end;
+
+    
+    display: flex;
+    justify-content: space-between;
+
+    padding: 1.5rem 5rem;
+    border-top: 1px solid $color-grey-light;
+    
+    color: $color-grey;
+    font-size: 1.2rem;
+}

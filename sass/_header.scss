@@ -1,0 +1,16 @@
+.header {
+    grid-column: center-start / center-end;
+
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    justify-content: space-between;
+    padding: 0 5rem;
+    margin-top: 1rem;
+
+    &__logo {
+        height: 100%;
+        width: auto;
+    }
+
+}
+

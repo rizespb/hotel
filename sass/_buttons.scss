@@ -1,0 +1,61 @@
+.btn {
+    display: inline-block;
+    border: none;
+    outline: none;
+    border-radius: 10rem;
+    padding: 1rem 1rem 1rem 3rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: $color-grey;
+    cursor: pointer;
+    vertical-align: middle;
+
+    transition: all .5s;
+
+    &:active {
+        transform: translateY(3px);
+    }
+
+    &__text {
+        display: flex;
+        align-items: center;
+
+        &::after {
+            content: "";
+            margin-left: 2rem;
+            display: inline-block;
+            height: 4rem;
+            width: 4rem;
+            background-size: cover;
+        }
+
+        &:hover,
+        &:active {
+            outline: none;
+        }
+    }
+}
+
+.btn-white {
+    background-color: $color-white;
+
+    & > .btn__text {
+
+        &::after {
+            background-image: url(../img/paw-orange.png);
+        }
+    }
+}
+
+.btn-orange {
+    background-color: $color-secondary;
+    color: $color-white;
+
+    & > .btn__text {
+
+        &::after {
+            background-image: url(../img/paw-white.png);
+        }
+    
+    }
+}
